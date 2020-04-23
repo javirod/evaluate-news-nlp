@@ -1,0 +1,77 @@
+@import "./nav-bar.css";
+@import "./footer.css";
+@import "./blog-card.css";
+
+body {
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 100px 100px auto 50px;
+    grid-template-columns: auto auto 400px;
+    grid-template-areas:
+    "hd hd hd"
+    "nav nav nav"
+    "body body body"
+    "ft ft ft";
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/*---Blog Post Text---*/
+
+.cont-post {
+    grid-area: body;
+    background-color: #E5E5E5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; 
+}
+
+figure {
+    order: 2;
+    text-align: center;
+}
+
+.about-auth {
+    order: 5;
+    text-align: center;
+}
+
+.txt-article {
+    order: 3;
+}
+
+blockquote {
+    order: 4;
+    font-style: italic;
+    color: gray;
+    font-size: 18px;
+    text-align: center;
+}
+
+#blog-date {
+    order: 1;
+    text-align: center;
+}
+
+/*---Responsive---*/
+
+@media(min-width: 600px){
+    .container{
+    display: grid;
+    grid-template-rows: 100px auto 50px;
+    grid-template-columns: auto auto 400px;
+    grid-template-areas:
+    "hd hd nav"
+    "body body body"
+    "ft ft ft";
+    }
+
+}

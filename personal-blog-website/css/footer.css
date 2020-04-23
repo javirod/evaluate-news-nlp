@@ -1,0 +1,23 @@
+.ftr {
+    grid-area: ft;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+    "ft1 ft2";
+    padding-top: 10px;
+}
+
+.ftr-text {
+    grid-area: ft1;
+}
+
+.subscribe-btn {
+    grid-area: ft2;
+    background-color: #003562;
+    color: white;
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 10px;
+}

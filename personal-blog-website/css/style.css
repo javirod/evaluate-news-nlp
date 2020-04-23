@@ -1,0 +1,53 @@
+@import "./nav-bar.css";
+@import "./footer.css";
+@import "./blog-card.css";
+
+body {
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 100px 100px 800px 50px;
+    grid-template-columns: auto auto 400px;
+    grid-template-areas:
+    "hd hd hd"
+    "nav nav nav"
+    "body body body"
+    "ft ft ft";
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/*---Blog Cards---*/
+
+.cont-cards {
+    grid-area: body;
+    background-color: #E5E5E5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*---Responsive---*/
+
+@media(min-width: 600px) {
+    .container{
+    display: grid;
+    grid-template-rows: 100px 800px 50px;
+    grid-template-columns: auto auto 400px;
+    grid-template-areas:
+    "hd hd nav"
+    "body body body"
+    "ft ft ft";
+    }
+
+    .cont-cards {
+        flex-direction: row;
+    }
+}

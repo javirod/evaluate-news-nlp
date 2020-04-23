@@ -1,0 +1,44 @@
+.nav-bar {
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.blog-nav {
+    order: 1;
+}
+
+.about-nav {
+    order: 2;
+}
+
+.gallery-nav {
+    order: 3;
+}
+
+.social-media {
+    order: 4;
+    width: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.fb-logo {
+    order:1;
+}
+
+.twit-logo {
+    order:2;
+}
+
+.linkedin-logo {
+    order: 3;
+}
+
+.title-heading {
+    grid-area: hd;
+}

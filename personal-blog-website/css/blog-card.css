@@ -1,0 +1,26 @@
+.card-current {
+    order: 1;
+    width: 300px;
+    height: 500px;
+    margin: 15px 15px 15px 15px;
+    background-color: #F1F1EF;
+    box-shadow: 5px 5px 10px grey;
+}
+
+.card-current-txt {
+    margin: 10px;
+    vertical-align: bottom;
+}
+
+.card-old {
+    order: 2;
+    width: 300px;
+    height: 500px;
+    margin: 15px 15px 15px 15px;
+    background-color: #F1F1EF;
+    box-shadow: 5px 5px 10px grey;
+}
+
+.card-old-txt {
+    margin: 10px;
+}
