@@ -11,7 +11,7 @@ function performAction(event){
   
   .then(function(newData) {
     const newFeelings =  document.getElementById('feelings').value;
-    postData('/addData', {temperature: newData.main.temp, date: newDate, userResponse: newFeelings});
+    postData('http://localhost:8081/addData', {temperature: newData.main.temp, date: newDate, userResponse: newFeelings});
   })
 
   .then(function() {
@@ -58,7 +58,7 @@ const postData = async ( url = '', data = {})=>{
 
 // Updates the UI based on API data
 const updateUI = async () => {
-  const request = await fetch('/getData');
+  const request = await fetch('http://localhost:8081/getData');
   try {
     const allData = await request.json();
     console.log(allData);

@@ -3,6 +3,7 @@ const projectData = [];
 
 // Require Express to run server and routes
 const express = require('express');
+const path = require('path')
 
 // --Require body-parser
 const bodyParser = require('body-parser');
@@ -21,7 +22,7 @@ app.use(cors());
 
 // Initialize the main project folder
 // connects server side code to client side code
-app.use(express.static('dist'));
+// app.use(express.static('dist'));
 app.use(express.static('src/client'));
 
 const port = 8081;
@@ -35,6 +36,9 @@ function listening(){
     console.log(`App listening at http://localhost: ${port}`);
 };
 
+app.get('/', function(req, res) {
+    res.sendFile('dist/index.html')
+})
 // Setup Get Route that returns projectData
 
 app.get('/getData', function (req, res) {
