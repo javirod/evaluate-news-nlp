@@ -18,16 +18,16 @@ The travel-app made use of asynchronous functions to take user city input and ma
 
 ## Challenges
 
-I had some issues chaining `.then()` together. I also couldn't figure out why i couldn't reach the weather API and found that i was missing `http://` at the beginning of URL.
+
 
 ## Future Work
 
-Some additional work I would like to update the weather-journal-app project when i get more time: 
+Some additional work I would like to update the travel-app project when i get more time: 
 
-- [ ] Use `tests.js` as a template for writing and running some basic tests for your code.
-- [ ] Update UI so that it is more aesthetically pleasing.
+- [ ] 
+- [ ] 
 
 ## Resources
 
-* [https://expressjs.com/en/starter/hello-world.html](https://expressjs.com/en/starter/hello-world.html)
-* [https://openweathermap.org/weather-data](https://openweathermap.org/weather-data)
+* []()
+* []()

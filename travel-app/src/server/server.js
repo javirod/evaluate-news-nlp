@@ -21,9 +21,10 @@ app.use(cors());
 
 // Initialize the main project folder
 // connects server side code to client side code
-app.use(express.static('website'));
+app.use(express.static('dist'));
+app.use(express.static('src/client'));
 
-const port = 8000;
+const port = 8081;
 
 // Setup Server
 
