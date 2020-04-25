@@ -1,113 +1,151 @@
-body{
-    background: #fffff8;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-}
+$base-color: #3B4A6B;
+$inv-color: #C4B594;
 
-#app{
+.app{
     display: grid;
-    grid-auto-rows: minmax(150px, auto);
-    /* grid-template-columns:  */
+    grid-template-rows: 150px auto auto auto 100px;
+    grid-template-columns: auto ;
+    grid-template-areas:
+    "hd"
+    "inpt"
+    "img"
+    "bod"
+    "ft ";
     height:100vh;
-    background: #f23557;
-    color: #f0d43a;
     justify-content: center;
     grid-gap: 1em;
-    font-size: 20px;
+}
+body{
     font-family: 'Oswald', sans-serif;
-}
-
-.holder{
-    justify-content: center;
-
-}
-
-.entry{
-    background: rgba(59, 74, 107, .4);
-}
-
-#entryHolder{
-
-}
-
-#date{
-
-}
-
-#temp{
-
-}
-
-#content{
-
+    background: #F8F8FF; // Ghost White
+    font-size: 20px;
+    margin: 0;
+    border: 0;
 }
 
 .headline {
-
+    grid-area: hd;
+    font-size: 75px;
+    vertical-align: center;
 }
-.title{
 
+h1{
+    display: block;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.bod{
+    display: block;
+    grid-area: inpt;
+}
+
+#entry{
+    background: $base-color;
+}
+
+.entryTitle{
+    color: #F8F8FF;
+}
+
+#output{
+    grid-area: img;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+}
+
+.cityImg{
+    display: block;
+    order: 1;
+    margin: 10px;
+}
+
+.resultsText{
+    order: 2;
+    padding: 10px;
+}
+
+#dynamicData{
+    color: #F8F8FF;
+}
+footer{
+    grid-area: ft;
 }
 
 /*  Basic Styling To Override Default For Basic HTML Elements */
 label{
     display:block;
-    font-size: 27px;
+    border: 10px;
+    margin: 20px;
 }
 
 input{
     display:block;
     height: 60px;
     width: 320px;
-    background:#22b2da;
-    color: #f0d43a;
+    background: $inv-color;
+    color: $base-color;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
+    margin: 10px;
     border: none;
+    padding: 10px;
 }
 
 button{
     display: block;
     width: 400px;
     height: 100px;
-    background: #3b4a6b;
-    color: #f0d43a;
+    background: $base-color;
+    color: $inv-color;
     font-size: 26px;
     font-family: 'Oswald', sans-serif;
     border: none;
     box-shadow: 2px 4px 5px #444;
-}
-h1{
-    font-size: 36px;
+    margin: 10px
 }
 
-textarea{
-    background:#22b2da;
-    color: #f0d43a;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-}
-/* Reset style for HTML element on active to have no border*/
+/* Mod: Reset style for HTML element on active to have no border*/
 input:focus,
 select:focus,
 textarea:focus,
 button:focus {
     outline: none;
 }
-/* Style for Placeholder Text*/
+
+/* Mod: Style for Placeholder Text*/
 ::placeholder { /* Firefox, Chrome, Opera */ 
-    color: #f0d43a; 
+    color: $base-color; 
     font-family: 'Oswald', sans-serif;
 
 } 
-  
+
 :-ms-input-placeholder { /* Internet Explorer 10-11 */ 
-    color: #f0d43a; 
+    color: $base-color; 
     font-family: 'Oswald', sans-serif;
 
 } 
-  
+
 ::-ms-input-placeholder { /* Microsoft Edge */ 
-    color: #f0d43a; 
+    color: $base-color; 
     font-family: 'Oswald', sans-serif;
+}
 
-} 
+@media(min-width: 800px) {
+    .app{
+        grid-template-rows: 150px auto auto 100px;
+        grid-template-columns: auto auto;
+        grid-template-areas:
+        "hd hd"
+        "inpt inpt"
+        "img bod"
+        "ft ft";
+    }
+    #output{
+        flex-direction: row;
+    }
+}

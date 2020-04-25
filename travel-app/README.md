@@ -18,7 +18,9 @@ The travel-app made use of asynchronous functions to take user city input and ma
 
 ## Challenges
 
+I had some challenges with maneuvering through all the API GET requests since they all have their own different ways to call them. They're pretty similar for the most part, but finding the differences between them was tricky.
 
+I also had some issues with deciding how to dynamically update the UI. I decided to POST all of the data to the local server at the end in one POST request. This meant that I had to keep passing necessary variable through my Promise.then() methods. I decided to do this so that I could store all of the data neatly in one endpoint on the server so that I could scale the app in the future without much tweaking to the server.
 
 ## Future Work
 
@@ -29,5 +31,7 @@ Some additional work I would like to update the travel-app project when i get mo
 
 ## Resources
 
-* []()
-* []()
+* [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date)
+* [https://www.geeksforgeeks.org/how-to-calculate-the-number-of-days-between-two-dates-in-javascript/](https://www.geeksforgeeks.org/how-to-calculate-the-number-of-days-between-two-dates-in-javascript/)
+* [https://stackoverflow.com/questions/19597361/parse-date-month-and-year-from-javascript-date-form](https://stackoverflow.com/questions/19597361/parse-date-month-and-year-from-javascript-date-form)
+* [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil)

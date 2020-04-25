@@ -24,10 +24,12 @@
     "babel-loader": "^8.1.0",
     "css-loader": "^3.5.2",
     "html-webpack-plugin": "^4.2.0",
+    "jest": "^25.4.0",
     "node-sass": "^4.14.0",
     "sass-loader": "^8.0.2",
     "source-maps": "^1.0.12",
     "style-loader": "^1.1.4",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.10.3",
+    "workbox-webpack-plugin": "^5.1.3"
   }
 }

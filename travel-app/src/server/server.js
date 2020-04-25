@@ -22,8 +22,8 @@ app.use(cors());
 
 // Initialize the main project folder
 // connects server side code to client side code
-// app.use(express.static('dist'));
-app.use(express.static('src/client'));
+app.use(express.static('dist'));
+// app.use(express.static('src/client'));
 
 const port = 8081;
 
@@ -53,9 +53,13 @@ app.post('/addData', addEntry);
 function addEntry (req, res) {
     let newData = req.body;
     let newEntry = {
-        temperature: newData.temperature,
-        date: newData.date,
-        userResponse: newData.userResponse
+        cityServ: newData.city,
+        dateServ: newData.date,
+        countServ: newData.countDown,
+        highServ: newData.highTemp,
+        lowServ: newData.lowTemp,
+        descrServ: newData.weatherDesc,
+        imgServ: newData.url
     }
     projectData.push(newEntry);
     console.log(projectData);
