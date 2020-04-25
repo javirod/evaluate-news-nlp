@@ -59,7 +59,8 @@ function addEntry (req, res) {
         highServ: newData.highTemp,
         lowServ: newData.lowTemp,
         descrServ: newData.weatherDesc,
-        imgServ: newData.url
+        imgServ: newData.url,
+        flightServ: newData.flight
     }
     projectData.push(newEntry);
     console.log(projectData);

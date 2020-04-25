@@ -49,6 +49,16 @@ h1{
     color: #F8F8FF;
 }
 
+#city:hover{
+    opacity: 0.8;
+    transition: ease 0.3s all;
+}
+
+#tripDate:hover{
+    opacity: 0.8;
+    transition: ease 0.3s all;
+}
+
 #output{
     grid-area: img;
     display: none;
@@ -106,7 +116,12 @@ button{
     font-family: 'Oswald', sans-serif;
     border: none;
     box-shadow: 2px 4px 5px #444;
-    margin: 10px
+    margin: 10px;
+}
+
+button:hover{
+    opacity: 0.6;
+    transition: ease 0.3s all;
 }
 
 /* Mod: Reset style for HTML element on active to have no border*/

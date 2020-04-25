@@ -55,6 +55,8 @@ function performAction(event){
   
   .then(function(result) {
     console.log(result)
+    const flightData = document.getElementById('flight').value;
+    console.log(flightData)
     postData('http://localhost:8081/addData', {
       city: result.cityPost,
       date: result.datePost,
@@ -62,7 +64,8 @@ function performAction(event){
       highTemp: result.highPost,
       lowTemp: result.lowPost,
       weatherDesc: result.descPost,
-      url: result.imgPost
+      url: result.imgPost,
+      flight: flightData
     })
 
   })
@@ -156,8 +159,9 @@ const updateUI = async () => {
     console.log(allData);
     let count = allData.length-1;
     document.getElementById('cityPic').src = allData[count].imgServ
-    document.getElementById('dynamicData').innerHTML = `<br><br>My trip to: ${allData[count].cityServ}<br>
-      Departing: ${allData[count].dateServ}<br><br>
+    document.getElementById('dynamicData').innerHTML = `<br>My trip to: ${allData[count].cityServ}<br>
+      Departing: ${allData[count].dateServ}<br>
+      On Flight: ${allData[count].flightServ}<br><br>
       Trip is ${allData[count].countServ} days away<br>
       Typical weather for then is:<br>
       High - ${allData[count].highServ}<br>

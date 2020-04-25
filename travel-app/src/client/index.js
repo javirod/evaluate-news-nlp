@@ -10,8 +10,8 @@ import './styles/style.scss'
 
 document.getElementById('generate').addEventListener('click', performAction);
 
-export { 
-    performAction,
+export {
+    performAction
     // getWeather,
     // postData,
     // updateUI

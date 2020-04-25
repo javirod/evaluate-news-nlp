@@ -10,11 +10,15 @@
 
 ## Instructions
 
-To view the page open terminal and point to project root folder ` cd /travel-app` then run `node server.js`. In your browser open [http://localhost:8081/](http://localhost:8081/) and start testing out the app's functionality.
+To view the page open terminal and point to project root folder ` cd ./travel-app` then run `npm run build-prod`. To start express server run `node run start`. In your browser open [http://localhost:8081/](http://localhost:8081/) and start testing out the app's functionality.
+
+To build development run `nmp run build-dev`.
 
 ## Goals
 
 The travel-app made use of asynchronous functions to take user city input and make requests to the Geonames, Weatherbit, and Pixabay APIs. The UI is dynamically updated based on the responses from the external APIs and user input data.
+
+I was able to implement the allow user to add flight data of Extend your Project Further.
 
 ## Challenges
 
@@ -26,8 +30,9 @@ I also had some issues with deciding how to dynamically update the UI. I decided
 
 Some additional work I would like to update the travel-app project when i get more time: 
 
-- [ ] 
-- [ ] 
+- [ ] Look into implementing most if not all of the suggestions in the Extend Yor Poject Further section
+- [ ] Clean up the UI so it looks sleeker
+- [ ] Build better tests
 
 ## Resources
 
